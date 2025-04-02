@@ -1,6 +1,4 @@
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import Hero from "@/components/Hero";
 import ProgramPhases from "@/components/ProgramPhases";
 import WeeklyBreakdown from "@/components/WeeklyBreakdown";
@@ -11,7 +9,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-violet-50 to-white">
       <Hero />
-      <div className="container mx-auto px-4 py-12 space-y-20">
+      <div className="container mx-auto px-3 sm:px-4 py-8 space-y-12 md:space-y-16">
         <ProgramPhases />
         <WeeklyBreakdown />
         <CallToAction />

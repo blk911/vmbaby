@@ -106,23 +106,23 @@ const WeeklyBreakdown = () => {
   ];
 
   return (
-    <section id="curriculum" className="py-10">
-      <div className="text-center mb-12">
-        <Badge variant="outline" className="mb-2 border-purple-300 text-purple-700 px-3 py-1">Curriculum</Badge>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Weekly Journey</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+    <section id="curriculum" className="py-8">
+      <div className="text-center mb-8">
+        <Badge variant="outline" className="mb-2 border-purple-300 text-purple-700 px-3 py-1 rounded-full">Curriculum</Badge>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-3">Weekly Journey</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto text-base">
           Our carefully crafted program takes you through a journey of self-discovery week by week. 
           Each session builds on the previous ones to create a transformative experience.
         </p>
       </div>
 
       <Tabs defaultValue="section1" className="w-full">
-        <TabsList className="grid grid-cols-3 md:grid-cols-6 mb-8">
+        <TabsList className="grid grid-cols-3 md:grid-cols-6 mb-6 rounded-full overflow-hidden">
           {sections.map((section) => (
             <TabsTrigger 
               key={section.id} 
               value={section.id}
-              className="text-xs md:text-sm"
+              className="text-xs py-1.5"
             >
               {section.id === "section5" || section.id === "section6" 
                 ? `Phase 2-${section.id === "section5" ? "1" : "2"}` 
@@ -135,30 +135,30 @@ const WeeklyBreakdown = () => {
         
         {sections.map((section) => (
           <TabsContent key={section.id} value={section.id}>
-            <Card className="p-6 border-t-4 border-t-purple-500">
-              <h3 className="text-xl md:text-2xl font-bold text-purple-800 mb-2">{section.title}</h3>
-              <p className="text-gray-600 italic mb-4">{section.subtitle}</p>
+            <Card className="p-5 border-t-4 border-t-purple-500 rounded-xl">
+              <h3 className="text-lg md:text-xl font-semibold text-purple-800 mb-2">{section.title}</h3>
+              <p className="text-gray-600 italic mb-3 text-sm">{section.subtitle}</p>
               
               {section.description && (
-                <div className="mb-4">
-                  <p>{section.description}</p>
+                <div className="mb-3">
+                  <p className="text-sm">{section.description}</p>
                 </div>
               )}
               
               {section.weeks && (
-                <div className="space-y-6 mt-4">
+                <div className="space-y-4 mt-4">
                   {section.weeks.map((week) => (
-                    <div key={week.number} className="bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
-                      <div className="flex items-center mb-3">
-                        <div className="h-8 w-8 rounded-full bg-purple-100 flex items-center justify-center mr-3">
-                          <span className="text-purple-700 font-bold">{week.number}</span>
+                    <div key={week.number} className="bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+                      <div className="flex items-center mb-2">
+                        <div className="h-7 w-7 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                          <span className="text-purple-700 font-medium text-sm">{week.number}</span>
                         </div>
-                        <h4 className="text-lg font-bold">{week.title}</h4>
+                        <h4 className="text-base font-medium">{week.title}</h4>
                       </div>
-                      <p className="text-gray-600 mb-2">{week.description}</p>
-                      <div className="mt-3 p-3 bg-gray-50 rounded-md">
-                        <p className="text-sm font-medium text-gray-700">Activity:</p>
-                        <p className="text-gray-600">{week.activity}</p>
+                      <p className="text-gray-600 mb-2 text-sm">{week.description}</p>
+                      <div className="mt-2 p-2 bg-gray-50 rounded-md">
+                        <p className="text-xs font-medium text-gray-700">Activity:</p>
+                        <p className="text-gray-600 text-sm">{week.activity}</p>
                       </div>
                     </div>
                   ))}
@@ -167,8 +167,8 @@ const WeeklyBreakdown = () => {
               
               {section.steps && (
                 <div className="mt-4">
-                  <h4 className="font-bold text-lg mb-3">Process Steps:</h4>
-                  <ol className="list-decimal pl-5 space-y-2">
+                  <h4 className="font-medium text-base mb-2">Process Steps:</h4>
+                  <ol className="list-decimal pl-5 space-y-1.5 text-sm">
                     {section.steps.map((step, index) => (
                       <li key={index} className="text-gray-700">{step}</li>
                     ))}
