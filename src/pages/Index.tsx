@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ProgramPhases from "@/components/ProgramPhases";
 import WeeklyBreakdown from "@/components/WeeklyBreakdown";
 import CallToAction from "@/components/CallToAction";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,6 +12,7 @@ const Index = () => {
       <Hero />
       <div className="container mx-auto px-3 sm:px-4 py-8 space-y-12 md:space-y-16">
         <ProgramPhases />
+        <Testimonials />
         <WeeklyBreakdown />
         <CallToAction />
       </div>

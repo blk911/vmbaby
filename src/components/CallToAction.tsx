@@ -39,39 +39,25 @@ const CallToAction = () => {
   return (
     <section id="registration" className="py-10">
       <div className="grid md:grid-cols-2 gap-6 items-center">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Ready to Break Free and Find Yourself?</h2>
-          <p className="text-gray-600 mb-5 text-base">
-            Join GAPUniv's transformative 8-week journey to discover who you really are and build 
-            something meaningful with others who are on the same path.
-          </p>
-          
-          <div className="space-y-3 mb-6">
-            <div className="flex items-start">
-              <CheckCircle2 className="h-4 w-4 text-emerald-500 mr-2 mt-1" />
-              <div>
-                <h4 className="font-medium text-base">Weekly 3-5 hour sessions</h4>
-                <p className="text-gray-600 text-sm">Conversation-driven learning in a supportive environment</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <CheckCircle2 className="h-4 w-4 text-emerald-500 mr-2 mt-1" />
-              <div>
-                <h4 className="font-medium text-base">Led by experienced mentors</h4>
-                <p className="text-gray-600 text-sm">Guided by facilitators who prioritize your personal growth</p>
-              </div>
-            </div>
-            <div className="flex items-start">
-              <CheckCircle2 className="h-4 w-4 text-emerald-500 mr-2 mt-1" />
-              <div>
-                <h4 className="font-medium text-base">Limited spots available</h4>
-                <p className="text-gray-600 text-sm">Small cohorts ensure personalized attention and deeper connections</p>
-              </div>
-            </div>
+        <div className="relative overflow-hidden rounded-xl">
+          <div className="absolute inset-0 z-10 bg-gradient-to-tr from-violet-900/80 via-purple-800/70 to-transparent flex flex-col justify-end p-6">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-2 text-white">Ready to Break Free and Find Yourself?</h2>
+            <p className="text-white/90 mb-4 text-base">
+              Join GAPUniv's transformative 8-week journey to discover who you really are.
+            </p>
           </div>
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="w-full h-full object-cover aspect-video"
+          >
+            <source src="https://cdn.pixabay.com/vimeo/427534039/friends-42431.mp4?width=1280&hash=3cae5e231ed9bf6bb1cd54553c40e62f42cb9e00" type="video/mp4" />
+          </video>
         </div>
         
-        <Card className="p-5 border-0 shadow-md rounded-xl">
+        <Card className="p-5 border-0 shadow-md rounded-xl bg-white">
           {!submitted ? (
             <form onSubmit={handleSubmit}>
               <h3 className="text-xl font-semibold mb-4 text-center">Register Your Interest</h3>
