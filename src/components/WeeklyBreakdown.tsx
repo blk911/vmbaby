@@ -15,15 +15,15 @@ const WeeklyBreakdown = () => {
       weeks: [
         {
           number: 1,
-          title: "The Myth of "I Don't Know"",
-          description: ""I don't know" = "I haven't asked myself hard enough."",
-          activity: "Group reflection + journaling: "What would I do if I wasn't scared?""
+          title: 'The Myth of "I Don\'t Know"',
+          description: '"I don\'t know" = "I haven\'t asked myself hard enough."',
+          activity: 'Group reflection + journaling: "What would I do if I wasn\'t scared?"'
         },
         {
           number: 2,
           title: "Begin Uncovering Your Drivers",
           description: "What's pulling you forward? What's holding you back?",
-          activity: "Assignment: Audio journal — "Where am I stuck?""
+          activity: 'Assignment: Audio journal — "Where am I stuck?"'
         }
       ]
     },
@@ -36,12 +36,12 @@ const WeeklyBreakdown = () => {
           number: 3,
           title: "Identity Layer Peel-Back",
           description: "Life map through labels, roles, projections.",
-          activity: "Prompt: "What parts of me have I hidden, and why?""
+          activity: 'Prompt: "What parts of me have I hidden, and why?"'
         },
         {
           number: 4,
           title: "Stories and Reflections",
-          description: "Interview: "How do others describe me?"",
+          description: 'Interview: "How do others describe me?"',
           activity: "Create a self-portrait — written, visual, or spoken — no filters."
         }
       ]
@@ -55,7 +55,7 @@ const WeeklyBreakdown = () => {
           number: 5,
           title: "What Is Love (Really)?",
           description: "Love ≠ approval. Love = integrity.",
-          activity: "Prompt: "When did I last betray myself to keep the peace?""
+          activity: 'Prompt: "When did I last betray myself to keep the peace?"'
         },
         {
           number: 6,
@@ -80,7 +80,7 @@ const WeeklyBreakdown = () => {
           number: 8,
           title: "Preparing for What's Next",
           description: "Build your Fear Map",
-          activity: "Reflect: "If fear wasn't running me, what would I choose now?""
+          activity: 'Reflect: "If fear wasn\'t running me, what would I choose now?"'
         }
       ]
     },
@@ -100,7 +100,7 @@ const WeeklyBreakdown = () => {
         "Winnowing the Wall",
         "Visioning Circles",
         "Team Lock-In + Charter Writing",
-        "Mentor Reveal — You as "VC""
+        'Mentor Reveal — You as "VC"'
       ]
     }
   ];
