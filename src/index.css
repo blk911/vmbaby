@@ -104,3 +104,40 @@
     scroll-behavior: smooth;
   }
 }
+
+/* Adding global spacing reduction */
+.container {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.card {
+  padding: 3px;
+  margin: 3px;
+}
+
+section {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* Reduce all margins and paddings in components */
+h1, h2, h3, h4, h5, h6, p, 
+div, span, button, input, 
+textarea, select, a {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 3px;
+}
+
+.space-y-12,
+.space-y-16,
+.space-y-8,
+.space-y-6,
+.space-y-4 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+

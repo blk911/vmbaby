@@ -14,7 +14,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <ProgramDescription />
-      <div className="container mx-auto px-3 sm:px-4 py-8 space-y-12 md:space-y-16">
+      <div className="container mx-auto px-3 py-3 space-y-3">
         <div id="program">
           <ProgramPhases />
         </div>
