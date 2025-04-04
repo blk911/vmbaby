@@ -209,24 +209,51 @@ const WeeklyBreakdown = () => {
                 "What is the biggest operational bottleneck?",
                 "What feedback have you ignored or delayed acting on?"
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "phase4",
+      title: "THE ENTREPRENEUR'S REAL DILEMMA",
+      tagline: "The 20% you didn't see coming is what will define you.",
+      sections: [
+        {
+          id: "section8",
+          title: "OBSTACLES",
+          subtitle: "Solving for the unexpected",
+          description: "You strategized. You prepared. You made a plan. And you actually did most of it right — you're ahead of the game. You know 80% of what's needed. Yes — good old Mr. Pareto. But the real challenge? The 20% you didn't see coming. It's the part that stands between you and success. It's what we call: Solving for X.",
+          dilemmaSteps: [
+            {
+              title: "A. Solving for \"X\"",
+              content: "\"X\" is the unpredictable. The uncomfortable. The underestimated: A mental block, fear, or doubt, A market twist you didn't foresee, A broken system you were sure would work, A lack of skill, confidence, or clarity. \"Solving for X\" is where your edge begins.",
+              insights: [
+                "Vision meets your limits",
+                "Fear meets your creativity",
+                "Drive meets the wall",
+                "Creativity expands exponentially"
+              ]
             },
             {
-              title: "7. The Entrepreneur's REAL Dilemma: Obstacles",
-              description: "The 20% you didn't see coming is what will define you.",
-              subtopics: [
-                {
-                  title: "A. Solving for \"X\"",
-                  content: "\"X\" is the unpredictable. The uncomfortable. The underestimated: A mental block, fear, or doubt, A market twist you didn't foresee, A broken system you were sure would work, A lack of skill, confidence, or clarity. \"Solving for X\" is where your edge begins."
-                },
-                {
-                  title: "B. Choose Your Path",
-                  content: "Every founder reaches a point of friction — and then a fork in the road. \"I don't know how to do this.\" → Will you learn? \"What if I fail here?\" → What if this is your breakout moment? You are always choosing: I CAN or I CANNOT."
-                },
-                {
-                  title: "C. Mentor Prompts",
-                  content: "Help them spot and name their current obstacle — and face it directly: What's your \"X\" right now? What's the task or topic that brings up tension or hesitation? What action or conversation are you avoiding? What would you do if this obstacle never went away? Who's already solved this — and what can you learn from them?"
-                }
+              title: "B. Choose Your Path",
+              content: "Every founder reaches a point of friction — and then a fork in the road. \"I don't know how to do this.\" → Will you learn? \"What if I fail here?\" → What if this is your breakout moment? You are always choosing: I CAN or I CANNOT",
+              outcomes: [
+                "One leads to growth, insight, traction.",
+                "The other leads to excuses, retreat, and a slow stall-out."
               ]
+            },
+            {
+              title: "C. Mentor Prompts",
+              content: "Help them spot and name their current obstacle — and face it directly.",
+              questions: [
+                "What's your \"X\" right now?",
+                "What's the task or topic that brings up tension or hesitation?",
+                "What action or conversation are you avoiding?",
+                "What would you do if this obstacle never went away?",
+                "Who's already solved this — and what can you learn from them?"
+              ],
+              conclusion: "We are here to Solve for X — because that's the path to real success."
             }
           ]
         }
@@ -241,7 +268,8 @@ const WeeklyBreakdown = () => {
       phase.sections.forEach((section) => {
         tabs.push({
           id: section.id,
-          label: section.id === "section7" ? "Execute" :
+          label: section.id === "section8" ? "Dilemma" :
+                 section.id === "section7" ? "Execute" :
                  section.id === "section6" ? "Phase 2-2" :
                  section.id === "section5" ? "Phase 2-1" :
                  section.id === "section4" ? "Week 8" :
@@ -268,7 +296,7 @@ const WeeklyBreakdown = () => {
       </div>
 
       <Tabs defaultValue="section1" className="w-full">
-        <TabsList className="grid grid-cols-3 md:grid-cols-7 mb-3 rounded-full overflow-hidden">
+        <TabsList className="grid grid-cols-4 md:grid-cols-8 mb-3 rounded-full overflow-hidden">
           {tabs.map((tab) => (
             <TabsTrigger 
               key={tab.id} 
@@ -363,6 +391,51 @@ const WeeklyBreakdown = () => {
                                   <p className="text-xs text-gray-700">{subtopic.content}</p>
                                 </div>
                               ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {section.dilemmaSteps && (
+                    <div className="mt-3 space-y-3">
+                      {section.dilemmaSteps.map((step, index) => (
+                        <div key={index} className="bg-white p-3 rounded-lg border border-gray-100 shadow-sm">
+                          <h4 className="font-medium text-base mb-2 text-purple-700">{step.title}</h4>
+                          <p className="text-sm text-gray-700 mb-3">{step.content}</p>
+                          
+                          {step.insights && (
+                            <div className="mt-2 bg-purple-50 p-2 rounded-md">
+                              <p className="text-xs font-medium text-purple-700 mb-1">It's where your:</p>
+                              <ul className="list-disc pl-5 space-y-0.5 text-sm">
+                                {step.insights.map((insight, iIndex) => (
+                                  <li key={iIndex} className="text-gray-700">{insight}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          
+                          {step.outcomes && (
+                            <div className="mt-2 bg-purple-50 p-2 rounded-md">
+                              <ul className="list-disc pl-5 space-y-0.5 text-sm">
+                                {step.outcomes.map((outcome, oIndex) => (
+                                  <li key={oIndex} className="text-gray-700">{outcome}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                          
+                          {step.questions && (
+                            <div className="mt-2">
+                              <ul className="list-disc pl-5 space-y-1 text-sm">
+                                {step.questions.map((question, qIndex) => (
+                                  <li key={qIndex} className="text-gray-700">{question}</li>
+                                ))}
+                              </ul>
+                              {step.conclusion && (
+                                <p className="text-sm font-medium text-purple-700 mt-2">{step.conclusion}</p>
+                              )}
                             </div>
                           )}
                         </div>
