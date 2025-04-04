@@ -5,16 +5,28 @@ import WeeklyBreakdown from "@/components/WeeklyBreakdown";
 import CallToAction from "@/components/CallToAction";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import Navigation from "@/components/Navigation";
+import ProgramDescription from "@/components/ProgramDescription";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-violet-50 to-white">
+      <Navigation />
       <Hero />
+      <ProgramDescription />
       <div className="container mx-auto px-3 sm:px-4 py-8 space-y-12 md:space-y-16">
-        <ProgramPhases />
-        <Testimonials />
-        <WeeklyBreakdown />
-        <CallToAction />
+        <div id="program">
+          <ProgramPhases />
+        </div>
+        <div id="testimonials">
+          <Testimonials />
+        </div>
+        <div id="schedule">
+          <WeeklyBreakdown />
+        </div>
+        <div id="registration">
+          <CallToAction />
+        </div>
       </div>
       <Footer />
     </div>

@@ -24,15 +24,15 @@ const Hero = () => {
         </video>
       </div>
       
-      <div className="container mx-auto px-4 py-10 md:py-12 relative z-10">
+      <div className="container mx-auto px-4 pt-24 pb-16 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-block px-3 py-1 mb-4 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
             <span className="text-sm font-medium tracking-wide">ENROLLMENT OPEN NOW</span>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
+          <h1 className="text-3xl md:text-4xl font-bold mb-2">
             <span className="text-emerald-300">GAP</span>Univ
           </h1>
-          <h2 className="text-xl md:text-2xl font-medium mb-3">GET AWAY FROM PARENTS</h2>
+          <h2 className="text-xl md:text-2xl font-medium mb-3">GET A PLAN University</h2>
           <p className="text-base md:text-lg text-white/80 mb-6 max-w-xl mx-auto">
             "You can't build a life if you haven't met yourself."
           </p>
