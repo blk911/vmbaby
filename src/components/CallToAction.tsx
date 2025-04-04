@@ -60,7 +60,7 @@ const CallToAction = () => {
         <Card className="p-5 border-0 shadow-md rounded-xl bg-white">
           {!submitted ? (
             <form onSubmit={handleSubmit}>
-              <h3 className="text-xl font-bold mb-4 text-center text-violet-800">Thinking? No! ACT! Register!</h3>
+              <h3 className="text-xl font-bold mb-4 text-center text-violet-800">Thinking? No! Get in the game!</h3>
               
               <div className="space-y-4">
                 <div className="space-y-1.5">
